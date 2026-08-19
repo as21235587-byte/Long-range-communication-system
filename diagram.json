@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "author": "Ak Singh",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": -96, "left": -23.96, "attrs": {} },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn1",
+      "top": 25.4,
+      "left": -115.2,
+      "attrs": { "color": "green", "xray": "1" }
+    }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "btn1:1.l", "esp:GND.1", "green", [ "h-19.2", "v-28.8", "h105.6", "v48" ] ],
+    [ "btn1:1.r", "esp:4", "green", [ "v0", "h9.8", "v96", "h144", "v-86.4" ] ]
+  ],
+  "dependencies": {}
+}
